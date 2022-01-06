@@ -25,7 +25,8 @@ public class ApplicationConfig {
 	PropertySourcesPlaceholderConfigurer configurer 
 				= new PropertySourcesPlaceholderConfigurer(); //환경파일잡을때 쓰이는 객체
 	
-	System.out.println("2. Properties Run");
+	System.out.println("2. Properties Run"); //환경작업이 제일 먼저 실행됨 
+	//<context:property-placeholder location="classpath:admin2.properties, classpath:sub_admin2.properties" />와 아래와 같음
 	Resource[] locations = new Resource[2];
 	locations[0] = new ClassPathResource("admin3.properties");
 	locations[1] = new ClassPathResource("sub_admin3.properties");
