@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<!-- 	<bean id="student" class="sdlc02.Student" scope="prototype"> 같은 bean을 사용하지만 다른 주소값을 참조--> 
+	<bean id="student" class="sdlc02.Student" scope="singleton">
+		<constructor-arg value="흑수돌"/>
+		<constructor-arg value="30"/>
+	</bean>
+
+</beans>
