@@ -12,8 +12,7 @@ public class MainClass {
 		
 		Student student = ctx.getBean("student", Student.class);
 		student.getStudentInfo();
-		student.getStudentInfo();
-		//student.getStudentInfo();
+		
 		
 		ctx.close();
 	}

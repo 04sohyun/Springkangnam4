@@ -11,9 +11,9 @@ public class MainClass {
 		System.out.println("2 ctx.load After");
 		//실제 Bean 생성
 		ctx.refresh();
-		System.out.println("3 ctx.load After");
+		System.out.println("3 ctx.close Before");
 		ctx.close();
-		System.out.println("4 ctx.load After");
+		System.out.println("4 ctx.close After");
 	}
 
 }

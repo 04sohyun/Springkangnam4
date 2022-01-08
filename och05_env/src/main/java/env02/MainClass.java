@@ -12,5 +12,6 @@ public class MainClass {
 		System.out.println("adminPW: "+connection.getAdminPw());
 		System.out.println("sub_adminID: "+connection.getSub_adminId());
 		System.out.println("sub_adminPW: "+connection.getSub_adminPw());
+		ctx.close();
 	}
 }

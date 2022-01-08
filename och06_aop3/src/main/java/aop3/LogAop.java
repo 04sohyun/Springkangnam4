@@ -30,7 +30,7 @@ public class LogAop {
 	}
 	@Before("within(aop3.buz.*)")
 	public void beforeAdvice() {
-		System.out.println("beforeAdvice()");
+		System.out.println("@beforeAdvice()");
 	}
 	@After("within(aop3.buz.*)")
 	public void afterAdvice() {
