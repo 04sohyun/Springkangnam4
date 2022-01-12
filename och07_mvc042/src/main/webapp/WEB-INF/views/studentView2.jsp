@@ -8,6 +8,8 @@
 </head>
 <body>
 이름:${studentInfo.name }<br>
-나이:${studentInfo.age }
+나이:${studentInfo.age }<br>
+학년:${studentInfo.gradeNum }<br>
+반:${studentInfo.classNum }
 </body>
 </html>
