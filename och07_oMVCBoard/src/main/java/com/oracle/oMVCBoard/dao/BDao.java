@@ -273,6 +273,7 @@ public class BDao {
 		}
 	}
 
+	//이전 답변들 step수 하나씩 늘리기 
 	private void replyShape(String bGroup, String bStep) {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -288,6 +289,31 @@ public class BDao {
 			preparedStatement.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
+		}finally {
+			try {
+				if(preparedStatement!=null) preparedStatement.close();
+				if(connection!=null) connection.close();
+			}catch(Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+	}
+
+	//게시글 삭제
+	public void delete(String bId) {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		
+		String sql = "delete from mvc_board where bId = ?";
+		
+		try {
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, Integer.parseInt(bId));
+			
+			preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			System.out.println("list dataSource SQLException-->"+e.getMessage());
 		}finally {
 			try {
 				if(preparedStatement!=null) preparedStatement.close();
