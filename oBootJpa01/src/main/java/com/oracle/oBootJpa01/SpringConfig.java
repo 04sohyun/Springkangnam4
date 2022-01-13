@@ -19,7 +19,7 @@ public class SpringConfig {
 		this.em = em;
 	}
 
-	
+	    
 	@Bean
 	public MemberRepository memberRepository() {
 		return new JpaMemberRepository(em);
